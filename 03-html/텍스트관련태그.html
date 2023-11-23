@@ -22,11 +22,104 @@
 
         <h2>Paragraphs(문단)</h2>
 
-        <h3>- 문단 태그</h3>
+        <h3>- 문단(block) 태그</h3>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum, laudantium modi nostrum iste
-            facere atque eaque dolorum sequi maxime obcaecati voluptatibus. Deleniti saepe nihil cum perferendis ipsam?
-            Tenetur, mollitia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Provident earum, laudantium modi nostrum iste facere atque eaque dolorum sequi maxime obcaecati
+            voluptatibus. Deleniti saepe nihil cum perferendis ipsam? Tenetur, mollitia?
         </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, voluptatem.</p>
+        <pre>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+Perferendis voluptate nulla soluta ratione, 
+numquam aspernatur autem. 
+Repellendus, quos voluptas. 
+Omnis, quaerat fuga cumque harum error 
+cum vero eius sunt inventore?
+        </pre>
+
+        <h3>- 인라인(inline) 태그</h3>
+
+        <div>
+            <strong style="display: block">중요한 글씨</strong>
+            Lorem ipsum dolor sit amet, consectetur <b>adipisicing elit.</b> Aperiam quidem nisi aliquam amet eum a,
+            consequatur necessitatibus temporibus perferendis est delectus libero voluptatem doloremque maiores nulla
+            debitis assumenda, pariatur sit.
+
+            <span style="color: #999">날짜 : 2023-11-23</span>
+            <em style="font-style: normal">가나다라마바사</em>
+            <mark>mark</mark>
+        </div>
+
+        <hr />
+
+        <h2>목록(list)</h2>
+
+        <h3>- 순서가 없는 목록(ul)</h3>
+
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+
+        <h3>- 순서가 있는 목록(ol)</h3>
+
+        <ol>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ol>
+
+        <h3>- 정의 목록(dl)</h3>
+
+        <dl>
+            <dt>정의 제목</dt>
+            <dd>정의 설명1</dd>
+            <dd>정의 설명2</dd>
+            <dt>정의 제목</dt>
+            <dd>정의 설명1</dd>
+            <dd>정의 설명2</dd>
+        </dl>
+
+        <h3>네비게이션 구조(정답)</h3>
+        <!-- depth1 -->
+        <ul>
+            <li>
+                menu1
+                <!-- depth2 -->
+                <ul>
+                    <li>menu1-1</li>
+                    <li>menu1-2</li>
+                    <li>menu1-3</li>
+                </ul>
+            </li>
+            <li>
+                menu2
+                <!-- depth2 -->
+                <ul>
+                    <li>menu2-1</li>
+                    <li>menu2-2</li>
+                    <li>menu2-3</li>
+                </ul>
+            </li>
+            <li>
+                menu3
+                <!-- depth2 -->
+                <ul>
+                    <li>menu3-1</li>
+                    <li>menu3-2</li>
+                    <li>menu3-3</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div>
+            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
+        </div>
     </body>
 </html>
