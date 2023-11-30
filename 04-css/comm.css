@@ -1,0 +1,111 @@
+* {
+    color: aqua;
+}
+
+.desc2 {
+    font-size: 20px;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.desc1 {
+    color: blueviolet;
+}
+
+p.desc1 {
+    color: blue;
+}
+
+#main {
+    width: 500px;
+    height: 700px;
+    background-color: pink;
+}
+
+.header {
+    background-color: #eee;
+}
+.header.dark {
+    background-color: #333;
+}
+
+.header .depth1 {
+    background: blue;
+}
+
+#gnb .depth1 li {
+    background: yellow;
+}
+#gnb .depth1 a {
+    color: green;
+}
+#gnb .depth1 a {
+    color: red;
+}
+
+#gnb .depth1 > li {
+    background: orange;
+}
+
+#gnb .depth1 > li > a {
+    color: blue;
+}
+
+#gnb .depth2 a {
+    color: green;
+}
+
+#gnb .depth2 a:hover {
+    background: #000;
+}
+
+.input {
+    width: 300px;
+    height: 50px;
+}
+.input:focus {
+    background: #333;
+    color: #fff;
+}
+
+.bbs li a {
+    color: #64da1a;
+}
+
+.bbs li:first-child {
+    background: blueviolet;
+}
+
+.bbs li:first-child a {
+    color: red;
+}
+.bbs li:last-child {
+    background: yellow;
+}
+/* 마지막 li의 a태그 : color: blue; */
+.bbs li:last-child a {
+    color: blue;
+}
+.bbs li:nth-child(2) {
+    background: #333;
+}
+.bbs li:nth-child(2) a {
+    color: #fff;
+}
+
+.goto li::before {
+    content: '>';
+}
+.goto li::after {
+    content: '<';
+}
+
+.goto a {
+    color: #000;
+}
+.goto a::before {
+    content: '+';
+}
+.goto a::after {
+    content: '*';
+}
