@@ -1,7 +1,3 @@
-* {
-    color: aqua;
-}
-
 .desc2 {
     font-size: 20px;
     color: #e91e63;
@@ -101,7 +97,7 @@ p.desc1 {
 }
 
 .goto a {
-    color: #000;
+    color: #000 !important;
 }
 .goto a::before {
     content: '';
@@ -118,4 +114,18 @@ p.desc1 {
     height: 50px;
     background: url(./images/mobile_212852414260.png) 0 0 no-repeat;
     background-size: 100%;
+}
+
+.icon li:first-child::before {
+    content: '\f015';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+}
+.icon li:nth-child(2)::before {
+    content: '\f002';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+}
+.icon li:first-child a::after {
+    content: '=======';
 }
