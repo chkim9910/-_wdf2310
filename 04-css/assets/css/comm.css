@@ -1,6 +1,5 @@
-* {
-    color: aqua;
-}
+@import url(fonts.css);
+@import url(reset.css);
 
 .desc2 {
     font-size: 20px;
@@ -101,7 +100,7 @@ p.desc1 {
 }
 
 .goto a {
-    color: #000;
+    color: #000 !important;
 }
 .goto a::before {
     content: '';
@@ -118,4 +117,55 @@ p.desc1 {
     height: 50px;
     background: url(./images/mobile_212852414260.png) 0 0 no-repeat;
     background-size: 100%;
+}
+
+.icon li:first-child::before {
+    content: '\f015';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+}
+.icon li:nth-child(2)::before {
+    content: '\f002';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+}
+.icon li:first-child a::after {
+    content: '=======';
+}
+
+/* font */
+.font-size1 {
+    font-size: 20px;
+}
+.font-size2 {
+    font-size: 1.25em;
+    /* 12px 기준으로 1.25em 은 15px */
+    /* 부모 기준 */
+}
+.font-size3 {
+    /* 20px */
+    font-size: 1.666em;
+}
+.font-size4 {
+    /* 20px */
+    font-size: 1.666em;
+}
+
+.font-size5 {
+    /* 20px */
+    font-size: 1.666rem;
+}
+.font-size6 {
+    font-size: 1.666rem;
+}
+
+.font-size7 {
+    font-size: 10vw;
+}
+
+.font-f1 {
+    font-family: 'Sofia', cursive;
+}
+.font-f2 {
+    font-family: 'Shizuru', cursive;
 }
