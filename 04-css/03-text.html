@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>text</title>
+    </head>
+    <body>
+        <h1>text</h1>
+        <h2>text-align</h2>
+        <div class="text1">글씨 정렬</div>
+        <style>
+            .text1 {
+                width: 500px;
+                background: yellow;
+            }
+        </style>
+
+        <br />
+        <div class="text2">가운데 정렬</div>
+        <style>
+            .text2 {
+                width: 500px;
+                text-align: center;
+                background: yellow;
+            }
+        </style>
+        <br />
+        <!-- div : block -->
+        <div class="box1">
+            <span class="box2">인라인 요소</span>
+        </div>
+        <style>
+            .box1 {
+                /* vertical-align: middle; */
+                text-align: center;
+                width: 500px;
+                height: 200px;
+                background: lightblue;
+            }
+            .box2 {
+                width: 100px;
+                height: 100px;
+                line-height: 200px;
+                background: greenyellow;
+            }
+        </style>
+
+        <h2>vertical-align: middle;</h2>
+
+        <img src="./images/w.jpg" alt="" class="img-w" /> 네이버 웨일
+
+        <style>
+            .img-w {
+                /* display: block; 블럭 요소는 안돼 */
+                /* 인라인 요소만 가능 */
+                vertical-align: middle;
+            }
+        </style>
+
+        <h2>Text Decoration &#38; Text Transformation</h2>
+
+        <a href="#">goto</a>
+
+        <style>
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 20px;
+            }
+        </style>
+
+        <h2>Text Indentation</h2>
+
+        <div class="indent">글씨 날려버림</div>
+        <!-- 일반은 안보이고 시각장애인에게는 들리게... -->
+
+        <style>
+            .indent {
+                text-indent: -9999px;
+            }
+        </style>
+
+        <h2>line-height & letter-spacing</h2>
+
+        <div class="txt1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, dolore vero? Quisquam laudantium numquam quasi
+            consequatur accusantium asperiores explicabo porro quam, nulla dolore rerum. Nemo nam ex tempora maxime vel.
+        </div>
+
+        <style>
+            .txt1 {
+                font-size: 100px;
+                line-height: 1;
+                letter-spacing: -3px;
+            }
+        </style>
+
+        <h2>White Space</h2>
+
+        <div class="txt2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nisi voluptate harum, voluptates
+            exercitationem eligendi, consequuntur, quibusdam assumenda sapiente quam provident. Non cupiditate autem
+            quia praesentium. Similique sit quisquam rerum.
+        </div>
+
+        <style>
+            .txt2 {
+                font-size: 1rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        </style>
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </body>
+</html>
