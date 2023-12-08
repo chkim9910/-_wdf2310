@@ -22,3 +22,88 @@ header {
     height: 100px;
     background: lightpink;
 }
+#logo a {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+}
+#gnb .depth1 {
+    display: flex;
+    /* gap: 50px; */
+}
+#gnb .depth1 > li > a {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    background: red;
+}
+
+#gnb .depth2 {
+    display: none;
+}
+
+.slide ul {
+    display: flex;
+}
+.slide ul a {
+    /* display: block; */
+    background: red;
+}
+.slide ul img {
+    display: block;
+    /* 이미지는 inline 요소라 space가 적용됨 */
+}
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 200px;
+}
+.sec-g {
+    /* width: 33.333%; */
+    flex-grow: 1;
+    /* 1 : true (참), 0 : false(거짓) */
+    padding: 10px 0;
+    border: 1px solid #000;
+}
+.sec-g .sec-tit {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* bbs */
+.sec-bbs .list-bbs li {
+    display: flex;
+    align-items: center;
+}
+.sec-bbs .list-bbs li::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin-right: 10px;
+    background: red;
+}
+.sec-bbs .list-bbs a {
+    display: block;
+    /* padding: 5px 0; */
+}
+
+.sec-goto .sec-tit,
+.sec-bnr .sec-tit {
+    margin-bottom: 0;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 0;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: lawngreen;
+}
