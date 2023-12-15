@@ -13,14 +13,14 @@
 .wrap {
     width: 1200px;
     margin: auto;
-    background: lightcyan;
+    /* background: lightcyan; */
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background: lightpink;
+    /* background: lightpink; */
 }
 #logo a {
     display: flex;
@@ -32,12 +32,17 @@ header {
     display: flex;
     /* gap: 50px; */
 }
+#gnb .depth1:hover .depth2 {
+    display: block;
+    background: red;
+}
+
 #gnb .depth1 > li > a {
     display: flex;
     align-items: center;
     height: 100px;
     padding: 0 30px;
-    background: red;
+    /* background: red; */
 }
 
 #gnb .depth2 {
@@ -49,7 +54,7 @@ header {
 }
 .slide ul a {
     /* display: block; */
-    background: red;
+    /* background: red; */
 }
 .slide ul img {
     display: block;
@@ -66,8 +71,9 @@ header {
     /* width: 33.333%; */
     flex-grow: 1;
     /* 1 : true (참), 0 : false(거짓) */
+    flex-basis: 0;
     padding: 10px 0;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 .sec-g .sec-tit {
     margin-bottom: 10px;
@@ -100,10 +106,30 @@ header {
     font-size: 0;
 }
 
+.sec-goto .list-goto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 100%;
+}
+.sec-goto .list-goto li {
+    width: 48%;
+    height: 48%;
+    background: yellow;
+}
+.sec-goto .list-goto a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    line-height: 85px;
+}
+
 #footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background: lawngreen;
+    border-top: 1px solid #eee;
+    /* background: lawngreen; */
 }
