@@ -15,13 +15,36 @@
 
         <style>
             .box1 {
-                overflow: hidden;
-                width: 100px;
+                overflow-x: auto;
                 display: flex;
+                width: 100px;
+                border: 5px solid red;
             }
             .item {
+                flex-shrink: 0;
                 width: 100px;
+                height: 100px;
                 background: lightblue;
+            }
+        </style>
+
+        <h2>이용약관</h2>
+
+        <div class="container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi, architecto quam atque debitis
+            similique, reprehenderit fuga fugit veniam explicabo consequatur aperiam, officia culpa est quaerat deserunt
+            distinctio mollitia dolore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic labore quibusdam
+            laborum ratione blanditiis voluptatibus tempora suscipit porro in possimus itaque, sunt quisquam odit fuga.
+            Adipisci asperiores quasi aspernatur excepturi.
+        </div>
+
+        <style>
+            .container {
+                overflow: auto;
+                max-width: 300px;
+                height: 100px;
+                margin: 0 auto 500px;
+                border: 5px solid blue;
             }
         </style>
     </body>
