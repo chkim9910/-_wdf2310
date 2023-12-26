@@ -40,6 +40,24 @@
                 height: 300px;
                 background: red;
                 opacity: 0.5;
+                transition: all 0.3s;
+            }
+            .t1:hover {
+                transform: translate(50px, -50%);
+            }
+            .t2:hover {
+                transform: rotate(-30deg);
+            }
+            .t3:hover {
+                transform: scale(0.5);
+                transform-origin: 0 0;
+            }
+            .t4:hover {
+                transform: skew(-20deg);
+            }
+            .t5:hover {
+                /* transform: 위치X 30px 크기 0.8 회전 45도; */
+                transform: translateX(30px) scale(0.8) rotate(45deg);
             }
         </style>
 
@@ -51,6 +69,7 @@
         <style>
             .box-g {
                 perspective: 500px;
+                transform: rotateX(150deg);
             }
         </style>
     </body>
