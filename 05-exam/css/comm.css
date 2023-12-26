@@ -1,12 +1,28 @@
-/* reset */
+/* 전역 변수 설정 */
+:root {
+    --default: #222328;
+    --primary: red;
+    --white: #fff;
+    --black: #000;
 
+    --wrapW: 1200px;
+    --minH: calc(100vh - var(--hdH) - var(--ftH) - var(--slideH));
+    --hdH: 100px;
+    --ftH: 100px;
+    --slideH: 300px;
+
+    /* swiper */
+    --swiper-theme-color: #bcff00;
+}
+
+/* reset */
 * {
     margin: 0;
-    color: #222328;
+    color: var(--default);
     padding: 0;
     line-height: 1.5;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px; /* 기준폰트 */
     box-sizing: border-box;
     list-style: none;
 }
@@ -22,7 +38,7 @@
 
 .wrap {
     /* 최대 1200px까지 */
-    max-width: 1200px;
+    max-width: var(--wrapW);
     margin: auto;
     /* background: lightcyan; */
 }
@@ -49,7 +65,7 @@
     align-items: center;
     width: 200px;
     height: 40px;
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 #gnb .depth1 {
     display: flex;
@@ -61,9 +77,6 @@
 /* #gnb .depth1:hover .depth2 {}  전체 메뉴 보이게 */
 
 /* 아래는 각각의 메뉴 보이게 */
-#gnb .depth1 li:hover .depth2 {
-    display: block;
-}
 
 #gnb .depth1 > li > a {
     display: flex;
@@ -73,9 +86,22 @@
     white-space: nowrap;
     /* background: red; */
 }
-
+/* 마우스 오버시 전체 메뉴 보임 */
+/* #gnb .depth1:hover .depth2 */
+/* (li에) 마우스 오버시 개별 메뉴 보임 */
+#gnb .depth1 li:hover .depth2 {
+    opacity: 1;
+    visibility: visible;
+    max-height: 300px;
+    padding: 20px 0;
+}
 #gnb .depth2 {
-    display: none;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
     background: yellow;
     position: absolute;
     top: 100px;
@@ -83,7 +109,6 @@
     right: 0;
     z-index: 1000;
     /* width: 100%; */
-    padding: 20px 0;
     text-align: center;
 }
 #gnb .depth2 a {
@@ -145,6 +170,7 @@
     justify-content: space-between;
     gap: 20px;
     height: 200px;
+    min-height: var(--minH);
 }
 .sec-g {
     /* width: 33.333%; */
@@ -156,7 +182,7 @@
 }
 .sec-g .sec-tit {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /* bbs */
@@ -281,12 +307,12 @@
     border-radius: 20px;
     border: 1px solid #999;
     text-align: center;
-    background: #fff;
+    background: var(--white);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .modal .modal-hd {
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 .modal .btn-close {
@@ -298,7 +324,7 @@
     background: #000;
     border-radius: 50%;
     border: none;
-    color: #fff;
+    color: var(--white);
 }
 .modal .btn-close::after {
     content: '\f00d';
@@ -307,7 +333,7 @@
     font-size: 2rem;
 }
 .modal i {
-    color: #fff;
+    color: var(--white);
     font-size: 2rem;
 }
 

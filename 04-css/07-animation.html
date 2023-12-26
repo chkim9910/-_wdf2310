@@ -18,11 +18,42 @@
             }
             .ani {
                 position: absolute;
-                top: 0;
-                left: 0;
                 width: 200px;
                 height: 200px;
-                background: red;
+                animation-name: ani-box;
+                animation-duration: 10s;
+            }
+            @keyframes ani-box {
+                0% {
+                    top: 0;
+                    left: 0;
+                    background: red;
+                    transform: translate(0, 0);
+                }
+                25% {
+                    top: 0;
+                    left: calc(100% - 200px);
+                    background: yellow;
+                    transform: translate(0, 0);
+                }
+                50% {
+                    top: calc(100% - 200px);
+                    left: calc(100% - 200px);
+                    background: green;
+                    transform: translate(0, 0);
+                }
+                75% {
+                    top: calc(100% - 200px);
+                    left: 0;
+                    background: blue;
+                    transform: translate(0, 0);
+                }
+                100% {
+                    top: 50%;
+                    left: 50%;
+                    background: purple;
+                    transform: translate(-50%, -50%);
+                }
             }
         </style>
 
