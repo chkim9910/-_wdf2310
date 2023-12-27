@@ -86,6 +86,9 @@
     white-space: nowrap;
     /* background: red; */
 }
+#gnb .depth1 > li > a:hover {
+    background: red;
+}
 /* 마우스 오버시 전체 메뉴 보임 */
 /* #gnb .depth1:hover .depth2 */
 /* (li에) 마우스 오버시 개별 메뉴 보임 */
@@ -114,6 +117,9 @@
 #gnb .depth2 a {
     display: block;
     padding: 3px 0;
+}
+#gnb .depth2 a:hover {
+    color: red;
 }
 
 /* tablet */
@@ -155,7 +161,32 @@
     position: absolute;
     top: 0;
     left: 0;
+    animation: ani-slide 10s infinite linear;
 }
+@keyframes ani-slide {
+    0% {
+        left: 0;
+    }
+    30% {
+        left: 0;
+    }
+    32% {
+        left: -100%;
+    }
+    62% {
+        left: -100%;
+    }
+    64% {
+        left: -200%;
+    }
+    96% {
+        left: -200%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
 .slide ul a {
     /* display: block; */
     /* background: red; */
@@ -268,6 +299,10 @@
     height: 100px;
     border-top: 1px solid #eee;
     /* background: lawngreen; */
+}
+
+#footer .logo img {
+    filter: grayscale(100%);
 }
 
 @media screen and (max-width: 980px) {
