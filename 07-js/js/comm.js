@@ -81,3 +81,92 @@ console.log(user.name); // '김가을'
 console.log(`${user.name} 나이는 ${user.age}살 입니다.`);
 // 김가을은 귀여워요.
 console.log(`${user.name}은 ${user.cute ? '귀여워요' : '귀엽지 않아요'}.`);
+
+// 배열 (Array)
+// 여러 데이터를 순서대로 저장하기 위해 사용
+
+let fruits = ['사과', '바나나', '딸기'];
+
+console.log(fruits); // ['사과', '바나나', '딸기']
+console.log(fruits[0]); // '사과'
+console.log(fruits[1]); // '바나나'
+console.log(fruits[2]); // '딸기'
+
+// 함수 (Function)
+// 특정 기능을 수행하는 코드의 집합
+
+// 함수 선언
+function sayHello() {
+    // 함수 내용
+    console.log('안녕하세요');
+}
+
+// 함수 호출
+sayHello(); // '안녕하세요'
+
+// 함수의 재사용
+// 국어, 수학 점수를 전달하면 총점을 계산해주는 함수
+
+// 함수 선언
+// 총점을 계산해주는 함수
+function sum(a, b) {
+    return a + b;
+}
+
+// 함수 호출
+console.log(sum(80, 90)); // 170
+console.log(sum(70, 80)); // 150
+
+let e = sum(20, 30);
+console.log(e); // 50
+
+// 기명 함수 (Named Function)
+function hello() {
+    console.log('hello');
+}
+
+hello(); // 'hello'
+
+// 익명 함수 (Anonymous Function)
+let hello2 = function () {
+    console.log('hello2');
+};
+
+hello2(); // 'hello2'
+
+// 화살표 함수 (Arrow Function)
+let hello3 = () => {
+    console.log('hello3');
+};
+
+hello3(); // 'hello3'
+
+// 조건문 (if, else if, else)
+// 특정 조건에 따라 다른 코드를 실행할 때 사용
+
+// if (조건) {참일 경우 실행문} else {거짓일 경우 실행문}
+if (false) {
+} else {
+    console.log('false');
+}
+
+// DOM API (Document Object Model)
+// HTML 문서의 요소를 제어하는 방법
+
+// HTML 요소(Element) 검색
+const boxEl = document.querySelector('.box');
+
+// boxEl를 클릭했을 때, 할 일을 함수로 정의
+boxEl.addEventListener('click', function () {
+    console.log('click');
+    // boxEl 요소에 active 클래스 추가
+    boxEl.classList.add('active');
+});
+
+const tabEls = document.querySelectorAll('.tab');
+console.log(tabEls);
+
+tabEls.forEach(function (tabEl, index) {
+    console.log(tabEl, index);
+    tabEl.classList.add(`tab-${index + 1}`);
+});

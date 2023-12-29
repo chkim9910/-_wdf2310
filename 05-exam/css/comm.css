@@ -92,19 +92,20 @@
 /* 마우스 오버시 전체 메뉴 보임 */
 /* #gnb .depth1:hover .depth2 */
 /* (li에) 마우스 오버시 개별 메뉴 보임 */
-#gnb .depth1 li:hover .depth2 {
+/* #gnb .depth1 li:hover .depth2 {
     opacity: 1;
     visibility: visible;
     max-height: 300px;
     padding: 20px 0;
-}
+} */
 #gnb .depth2 {
     overflow: hidden;
-    max-height: 0;
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
+    display: none;
+    /* max-height: 0; */
+    padding: 20px 0;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    /* transition: all 0.3s; */
     background: yellow;
     position: absolute;
     top: 100px;
@@ -203,7 +204,9 @@
     height: 200px;
     min-height: var(--minH);
 }
-.sec-g {
+.tabs,
+.sec-bnr,
+.sec-goto {
     /* width: 33.333%; */
     flex-grow: 1;
     /* 1 : true (참), 0 : false(거짓) */
@@ -232,6 +235,46 @@
 .sec-bbs .list-bbs a {
     display: block;
     /* padding: 5px 0; */
+}
+
+.sec-gallery .list-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* tabs */
+.tabs {
+    position: relative;
+    display: flex;
+}
+.tabs .sec-g {
+    width: 50%;
+}
+.tabs .tab-cont {
+    display: none;
+}
+.tabs .sec-tit {
+    padding: 5px 0 3px;
+    background: #eee;
+    text-align: center;
+}
+/* 활성화 tab */
+.tabs .active .sec-tit {
+    background: palevioletred;
+    color: #fff;
+}
+.tabs .tab-cont {
+    /* display: none; */
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 20px;
+}
+.tabs .active .tab-cont {
+    display: flex;
 }
 
 .sec-goto .sec-tit,
@@ -360,6 +403,7 @@
     border-radius: 50%;
     border: none;
     color: var(--white);
+    cursor: pointer;
 }
 .modal .btn-close::after {
     content: '\f00d';
