@@ -21,7 +21,13 @@
                 width: 200px;
                 height: 200px;
                 animation-name: ani-box;
-                animation-duration: 10s;
+                animation-duration: 4s;
+                animation-delay: 2s;
+                /* animation-iteration-count: infinite; */
+                /* animation-direction: alternate; */
+
+                animation-fill-mode: both;
+                animation-timing-function: ease-in-out;
             }
             @keyframes ani-box {
                 0% {
@@ -64,7 +70,7 @@
         <style>
             .box2 {
                 position: relative;
-                height: 400px;
+                height: 100vh;
                 margin: 400px 0 200px;
                 background: lightgray;
             }
@@ -76,12 +82,56 @@
                 height: 300px;
                 background: tomato;
             }
+            @keyframes ani-square {
+                0% {
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                }
+                10% {
+                    opacity: 0.7;
+                    top: 40%;
+                    left: 40%;
+                }
+                90% {
+                    opacity: 0.7;
+                    top: 40%;
+                    left: 40%;
+                }
+                100% {
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                }
+            }
             .circle {
                 position: absolute;
                 width: 200px;
                 height: 200px;
                 background: blue;
                 border-radius: 50%;
+            }
+            @keyframes ani-circle {
+                0% {
+                    opacity: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+                10% {
+                    opacity: 0.7;
+                    bottom: 40%;
+                    right: 40%;
+                }
+                90% {
+                    opacity: 0.7;
+                    bottom: 40%;
+                    right: 40%;
+                }
+                100% {
+                    opacity: 0;
+                    bottom: 0;
+                    right: 0;
+                }
             }
         </style>
     </body>
