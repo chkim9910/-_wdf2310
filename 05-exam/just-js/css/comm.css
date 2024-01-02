@@ -147,30 +147,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    animation: ani-slide 10s infinite linear;
-}
-@keyframes ani-slide {
-    0% {
-        left: 0;
-    }
-    30% {
-        left: 0;
-    }
-    32% {
-        left: -100%;
-    }
-    62% {
-        left: -100%;
-    }
-    64% {
-        left: -200%;
-    }
-    96% {
-        left: -200%;
-    }
-    100% {
-        left: 0;
-    }
+    transition: left 0.3s;
 }
 
 .slide ul a {

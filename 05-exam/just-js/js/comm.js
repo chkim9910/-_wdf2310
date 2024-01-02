@@ -60,4 +60,29 @@ $(function () {
         // this(그 아이)의 부모에게 .active 추가
         $(this).parent().addClass('active');
     });
+
+    // slide
+    // let now = 0;
+    const $slide = $('.list-slide');
+    const slideCount = $('.list-slide li').length;
+
+    setInterval(function () {
+        // now = now + 1;
+        // 나머지 연산자 %
+        now = (now + 1) % slideCount;
+        // now(1) = now(0) + 1;
+        // now(2) = now(1) + 1;
+        // now(0) = now(2) + 1;
+
+        updateSlidePosition();
+    }, 3000);
+
+    function updateSlidePosition() {
+        // .list-slide의 left 값이 이동
+        $slide.css({
+            left: 100 * now * -1 + '%',
+            // 0, -100%, -200%, 0
+            // now 0, 1, 2, 0
+        });
+    }
 });
