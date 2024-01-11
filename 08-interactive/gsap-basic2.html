@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
         <style>
             .sec-g {
                 border: 5px solid grey;
@@ -20,6 +22,7 @@
             }
             .green {
                 background: greenyellow;
+                transform-origin: 0 0;
             }
             .purple {
                 background: purple;
@@ -40,5 +43,20 @@
             <div class="box purple"></div>
             <div class="box blue"></div>
         </div>
+
+        <script>
+            const tl = gsap.timeline();
+
+            // gsap.to('엘리먼트', 시간(초단위), { 옵션 });
+            tl.to('.sec-timeline .green', 2, { x: 100, scale: 3 })
+                .to('.sec-timeline .purple', 1, { y: -100, x: 500, scale: 3 })
+                .to('.sec-timeline .blue', 1, { rotation: 360, scale: 3 });
+
+            // gsap 구문
+            gsap.to('.sec-basic .green', 1, { rotation: 360, x: 500, scale: 3 });
+            // from 상태에서 처음 상태로 돌아감
+            gsap.from('.sec-basic .purple', 1, { rotation: -360, x: 300, y: 300, scale: 3 });
+            gsap.fromTo('.sec-basic .blue', 1, { scale: 3 }, { scale: 10, opacity: 0.5 });
+        </script>
     </body>
 </html>
