@@ -51,24 +51,6 @@
                 background: #333;
                 color: #fff;
             }
-
-            .btn-top {
-                display: block;
-                position: fixed;
-                bottom: 50px;
-                left: auto;
-                /* right: -250px;
-                opacity: 0; */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 200px;
-                height: 200px;
-                background: blue;
-                color: #fff;
-                border-radius: 5px;
-                /* transition: all 0.3s; */
-            }
         </style>
     </head>
     <body>
@@ -79,18 +61,10 @@
             <div class="circle-g circle1">box1</div>
         </div>
         <div class="area3"></div>
-        <a href="#" class="btn-top">위로</a>
-
         <script>
             gsap.registerPlugin(ScrollTrigger);
 
             const hd = document.querySelector('#header');
-            const btnRightHidden = -250;
-
-            gsap.set('.btn-top', {
-                right: btnRightHidden,
-                opacity: 0,
-            });
 
             // $(window).on("")
             window.addEventListener('scroll', _.throttle(hdScroll, 300));
@@ -102,30 +76,16 @@
                 // header를 보이게 하기
 
                 if (window.scrollY > 100) {
-                    // header를 숨기기
                     gsap.to(hd, {
                         opacity: 0,
-                        display: 'none',
+                        display: none,
                         duration: 0.5,
                     });
-
-                    // srollTop 버튼 보이기
-                    gsap.to('.btn-top', {
-                        right: 50,
-                        opacity: 1,
-                    });
                 } else {
-                    // header를 보이기
                     gsap.to(hd, {
                         opacity: 1,
                         display: 'flex',
                         duration: 0.5,
-                    });
-
-                    // srollTop 버튼 숨기기
-                    gsap.to('.btn-top', {
-                        right: btnRightHidden,
-                        opacity: 0,
                     });
                 }
             }
